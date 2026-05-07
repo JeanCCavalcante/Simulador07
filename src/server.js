@@ -1,7 +1,9 @@
 const express = require('express');
 const movieRoutes = require('./routes/movieRoutes');
+const connectDB = require('./config/db'); // Importe a conexão
 
 const app = express();
+connectDB();
 
 app.use(express.json());
 
